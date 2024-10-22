@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  color: #ffeb3b;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+header .subheading {
+  font-size: 1.2rem;
+  color: #e1bee7;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff9800;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff9800;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff9800;
+  }
+}
+
+h1 {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+body {
+  background-image: url(freestocks-twVS-YjQn9Y-unsplash.jpg);
+  background-size: cover;
+}
+
+.pumpkin-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.pumpkin {
+  background: url("istockphoto-155446214-1024x1024-removebg-preview.png") no-repeat center center;
+  background-size: contain;
+  height: 300px; 
+  width: 300px; 
+}
+
+.pumpkin2 {
+  background: url("istockphoto-155446214-1024x1024-removebg-preview.png") no-repeat center center;
+  background-size: contain;
+  height: 300px; 
+  width: 300px;
+} 
+
+.glowing-image {
+  animation-name: floatPumpkin, glow, pump;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+}
+
+@keyframes floatPumpkin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.pumpkin2-container {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.cta {
+  margin-top: 5rem;
+}
+
+.cta-button {
+  background-color: #ff9800;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #ff5722;
+  transform: scale(1.1);
+} 
